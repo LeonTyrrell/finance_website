@@ -2,7 +2,7 @@ const _ = require('lodash')
 const BillingCycle = require('../billingCycle/billingcycle')
 
 //mais uma funcção middleware
-function getSumary(req, res) {
+function getSummary(req, res) {
     BillingCycle.aggregate([{
         $project: {credit: {$sum: "$credits.value"}, debt: {$sum: "$debts.value"}}
     }, {
@@ -18,4 +18,4 @@ function getSumary(req, res) {
     })
 }
 
-module.exports = { getSumary }
+module.exports = { getSummary }
