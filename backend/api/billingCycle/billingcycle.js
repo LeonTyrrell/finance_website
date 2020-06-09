@@ -14,7 +14,7 @@ const debtSchema = new mongoose.Schema({
 })
 
 const billingCycleSchema = new mongoose.Schema({
-    name: { type: String, required: [true, 'O nome é obrigatório, por favor informe o nome do erro!!']},
+    name: { type: String, required: [true, 'O nome é obrigatório, por favor informe o nome!!']},
     month: { type: Number, min: 1, max: 12, required: [true, 'O mês é obrigatório, por favor informe o número do mês!!'] },
     year: { type: Number, min: 1970, max: 2100, require: [true, 'O ano é obrigatório, por favor informe o ano do débito']},
     credits: [creditSchema],
